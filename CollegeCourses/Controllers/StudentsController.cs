@@ -16,8 +16,8 @@ namespace CollegeCourses.Controllers
         private CollegeCoursesContext db = new CollegeCoursesContext();
 
         public ActionResult ListMajors() {
-            var student = db.Students.ToList();
-            var majors = db.Majors.Where(i => i.MinSAT <= 950);
+            IEnumerable<Student> students = new List<Student>();
+            var majors = db.Majors.Where(i => i.MinSAT <= students);
             ViewMajors Majors = new ViewMajors();
             Majors.majors = majors;
 
