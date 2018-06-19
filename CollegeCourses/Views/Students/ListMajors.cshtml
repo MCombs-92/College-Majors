@@ -1,0 +1,18 @@
+﻿@model CollegeCourses.ViewModels.ViewMajors
+@{
+    ViewBag.Title = "Available Majors";
+}
+
+<h2>Available Majors</h2>
+
+@foreach (var major in Model.majors) {
+    
+    <p>
+
+        <span>@major.Description</span>
+        <span>@major.MinSAT</span>
+
+
+    </p>
+}
+
